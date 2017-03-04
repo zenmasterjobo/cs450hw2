@@ -31,7 +31,8 @@ int main()
 			for(int i = 0; i < num_words; i++)
 			{
 				printf("line_words[%d] = %s\n", i, line_words[i]);
-				if(line_words[i] == '|')
+				//if(line_words[i] == '|')
+				if(strcmp(line_words[i], "|") == 0)
 				{
 					pipes_num++;
 					printf(" Pipes: %d\n", pipes_num);
