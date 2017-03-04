@@ -8,8 +8,8 @@ all: pipes.x pipe_demo.x
 pipes.x: main.o parsetools.o
 	gcc -o $@ $^
 
-pipe_demo.x: pipe_demo.o
-	gcc -o $@ $^
+#pipe_demo.x: pipe_demo.o
+#	gcc -o $@ $^
 
 # $< is the first item after the colon (main.c here)
 main.o: main.c parsetools.h constants.h
