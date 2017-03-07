@@ -22,7 +22,7 @@ int split_cmd_line(char* line, char** list_to_populate) {
        list_to_populate[++i] = strtok_r(NULL, delimiters, &saveptr);
    };
 
+   
    return i;
    
 }
-

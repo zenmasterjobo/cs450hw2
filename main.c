@@ -9,7 +9,7 @@
 #include <string.h>
 #include <fcntl.h>
 
-void pipe_dream();
+void pipe_dream(char* left[], char* right[]);
 void syserror(const char *);
 void redirectInputOutput(char* left[], char* right[], char* symbol[]);
 
@@ -20,7 +20,6 @@ int main(){
   char* left[MAX_LINE_WORDS +1];
   char* right[MAX_LINE_WORDS +1];
   char* symbol[1];
-  int pipes_num = 0;
   // Loop until user hits Ctrl-D (end of input)
   // or some other input error occurs
   printf("\n $: ");
