@@ -82,11 +82,11 @@ void redirectInputOutput(char* left[], char* right[], char* symbol[]){
       execvp(*left, left); //execute the command
     }
     else{
-      int fd = open(left[0], O_RDONLY, 0777);
-      printf("%s\n", left[0]);
+      int fd = open(right[0], O_RDONLY, 0777);
+      //printf("%s\n", left[0]);
       close(0);
       dup(fd);
-      execvp(*right, right);
+      execvp(*left, left);
     }
     wait(NULL); //parent will wait for child to finish
 }
